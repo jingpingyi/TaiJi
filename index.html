@@ -5,12 +5,20 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="">
 	<style>
-		html {background-color: #ddd}
+	body {background-color: #ddd}
+	@keyframes spin {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
   	#tj {
 
   		width: 200px;
- 		 	height: 100px;
- 			border-width: 2px 2px 100px 2px;
+ 		height: 100px;
+ 		border-width: 2px 2px 100px 2px;
   		border-style: solid;
   		border-color: skyblue;
   		position: absolute;
@@ -20,6 +28,12 @@
   		left: 50%;
   		margin-top: -100px;
   		margin-left: -100px;
+
+		animation-duration: 6s;
+		animation-name: spin;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		
 		}	
 		#tj:before {
   		content: "";
